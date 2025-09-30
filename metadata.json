@@ -1,0 +1,8 @@
+{
+  "name": "AI Study Buddy",
+  "description": "An all-in-one study app where students can learn interactively with an AI Teacher. Features text-to-speech, topic browsing, Q&A, and a futuristic glassmorphism UI.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

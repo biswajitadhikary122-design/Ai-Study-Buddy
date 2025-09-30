@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Study Buddy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'glass-light': 'rgba(248, 250, 252, 0.50)',
+              'glass-dark': 'rgba(30, 41, 59, 0.50)',
+              'border-light': 'rgba(0, 0, 0, 0.08)',
+              'border-dark': 'rgba(255, 255, 255, 0.20)',
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'gradient-bg': 'gradient-bg 15s ease infinite',
+              'lip-sync': 'lip-sync 0.4s ease-in-out infinite',
+              'blink': 'blink 5s ease-in-out infinite',
+              'float': 'float 3s ease-in-out infinite',
+              'thinking': 'thinking 2.5s ease-in-out infinite',
+              'fade-in': 'fade-in 0.5s ease-in-out',
+              'scale-in': 'scale-in 0.2s ease-out',
+              'move-orb-1': 'move-orb-1 40s ease-in-out infinite',
+              'move-orb-2': 'move-orb-2 50s ease-in-out infinite alternate',
+              'move-orb-3': 'move-orb-3 30s ease-in-out infinite',
+            },
+            keyframes: {
+              'gradient-bg': {
+                '0%, 100%': { backgroundPosition: '0% 50%' },
+                '50%': { backgroundPosition: '100% 50%' },
+              },
+              'lip-sync': {
+                '0%, 100%': { transform: 'scaleY(0.2)' },
+                '50%': { transform: 'scaleY(1.0)' },
+              },
+              'blink': {
+                '0%, 90%, 100%': { transform: 'scaleY(1)' },
+                '95%': { transform: 'scaleY(0.1)' },
+              },
+              'float': {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-4px)' },
+              },
+              'thinking': {
+                '0%, 100%': { transform: 'rotate(-3deg)' },
+                '50%': { transform: 'rotate(3deg)' },
+              },
+              'fade-in': {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              'scale-in': {
+                '0%': { opacity: '0', transform: 'scale(0.95)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+              'move-orb-1': {
+                '0%': { transform: 'translate(0, 0) rotate(0deg)', opacity: 0.8 },
+                '25%': { transform: 'translate(10vw, -15vh) rotate(90deg)', opacity: 1 },
+                '50%': { transform: 'translate(-5vw, 10vh) rotate(180deg)', opacity: 0.7 },
+                '75%': { transform: 'translate(15vw, 5vh) rotate(270deg)', opacity: 1 },
+                '100%': { transform: 'translate(0, 0) rotate(360deg)', opacity: 0.8 },
+              },
+              'move-orb-2': {
+                '0%': { transform: 'translate(0, 0) rotate(0deg)', opacity: 0.7 },
+                '50%': { transform: 'translate(-20vw, 20vh) rotate(-180deg)', opacity: 1 },
+                '100%': { transform: 'translate(0, 0) rotate(-360deg)', opacity: 0.7 },
+              },
+              'move-orb-3': {
+                '0%': { transform: 'translate(0, 0) scale(1)', opacity: 0.5 },
+                '50%': { transform: 'translate(10vw, -10vh) scale(1.2)', opacity: 0.8 },
+                '100%': { transform: 'translate(0, 0) scale(1)', opacity: 0.5 },
+              },
+            },
+            backgroundSize: {
+              '400%': '400% 400%',
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
